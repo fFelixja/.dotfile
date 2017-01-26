@@ -21,6 +21,17 @@ brew update
 #%%%%%%%%%%%%%%%%%
 # brew some beer %
 #%%%%%%%%%%%%%%%%%
-brew install cask  wget spotify
-brew install java git
+brew cask install spotify iterm2
+brew install java git android-sdk
 
+#%%%%%%%%%%%%%%%%%
+#   oh-my-zsh    %
+#%%%%%%%%%%%%%%%%%
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+file="~/.zshrc"
+if [ -f "$file" ];
+then
+	rm "$file"
+fi
+touch "$file"
+echo "source ~/.dotfile/.zshrc" >> "$file"
