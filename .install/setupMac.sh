@@ -1,5 +1,6 @@
 #!/bin/bash
-echo "Hello, please wait for xCode to install... :(" 
+echo "Hello, please wait for xCode to install... :("
+gcc
 #%%%%%%%%%%%%%%%%%
 #    mkdirs	 %
 #%%%%%%%%%%%%%%%%%
