@@ -12,6 +12,12 @@ if [ ! -d ~.pubSrc  ]; then
 	mkdir ~/.pubSrc
 fi
 
+
+#%%%%%%%%%%%%%%%%%
+#   .dotfile	 %
+#%%%%%%%%%%%%%%%%%
+~/ -e "$(curl -fsSL https://github.com/fFelixja/.dotfile.git)"
+
 #%%%%%%%%%%%%%%%%%
 #     brew	 %
 #%%%%%%%%%%%%%%%%%
@@ -21,8 +27,8 @@ brew update
 #%%%%%%%%%%%%%%%%%
 # brew some beer %
 #%%%%%%%%%%%%%%%%%
-brew cask install spotify iterm2
-brew install java git android-sdk
+brew cask install java spotify iterm2 
+brew install git android-sdk
 
 #%%%%%%%%%%%%%%%%%
 #   oh-my-zsh    %
