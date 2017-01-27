@@ -626,29 +626,6 @@ defaults write org.m0k.transmission WarningLegal -bool false
 defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
 defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 
-###############################################################################
-# Kill affected applications                                                  #
-###############################################################################
-
-for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
-	"Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
-	"Terminal" "Transmission" "Twitter" "iCal"; do
-	killall "${app}" > /dev/null 2>&1
-done
-echo "Done. Note that some of these changes require a logout/restart to take effect."
-
-
-
-
-
-
-
-
-
-
-
-echo "Hello, please wait for xCode to install... :("
-gcc
 #%%%%%%%%%%%%%%%%%
 #    mkdirs	 %
 #%%%%%%%%%%%%%%%%%
@@ -660,32 +637,13 @@ if [ ! -d ~.pubSrc  ]; then
 	mkdir ~/.pubSrc
 fi
 
+###############################################################################
+# Kill affected applications                                                  #
+###############################################################################
 
-#%%%%%%%%%%%%%%%%%
-#   .dotfile	 %
-#%%%%%%%%%%%%%%%%%
-~/ -e "$(curl -fsSL https://github.com/fFelixja/.dotfile.git)"
-
-#%%%%%%%%%%%%%%%%%
-#     brew	 %
-#%%%%%%%%%%%%%%%%%
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-
-#%%%%%%%%%%%%%%%%%
-# brew some beer %
-#%%%%%%%%%%%%%%%%%
-brew cask install java spotify iterm2
-brew install git android-sdk
-
-#%%%%%%%%%%%%%%%%%
-#   oh-my-zsh    %
-#%%%%%%%%%%%%%%%%%
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-file="~/.zshrc"
-if [ -f "$file" ];
-then
-	rm "$file"
-fi
-touch "$file"
-echo "source ~/.dotfile/.zshrc" >> "$file"
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "cfprefsd" \
+	"Dock" "Finder" "Mail" "Messages" "Safari" "SizeUp" "SystemUIServer" \
+	"Terminal" "Transmission" "Twitter" "iCal"; do
+	killall "${app}" > /dev/null 2>&1
+done
+echo "Done. Note that some of these changes require a logout/restart to take effect."
