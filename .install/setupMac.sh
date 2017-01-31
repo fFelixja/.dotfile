@@ -308,11 +308,11 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 # Move the dock to the right side of the screen
 # Possible values: "left", "bottom", "right"
-defaults write com.apple.dock orientation -string "right"
+defaults write com.apple.dock orientation -string "bottom"
 
 # Move the dock to the end of the screen
 # Possible values: "end", "middle", "start"
-defaults write com.apple.dock pinning -string "end"
+defaults write com.apple.dock pinning -string "middle"
 
 # Enable highlight hover effect for the grid view of a stack (Dock)
 defaults write com.apple.dock mouse-over-hilite-stack -bool true
