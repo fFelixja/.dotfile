@@ -4,13 +4,12 @@ gcc
 #     brew	 %
 #%%%%%%%%%%%%%%%%%
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
 #%%%%%%%%%%%%%%%%%
 # brew some beer %
 #%%%%%%%%%%%%%%%%%
-brew cask install java spotify iterm2 intellij-idea atom
 brew install git android-sdk
-
+brew cask install java spotify iterm2 intellij-idea atom slack goofy
+android
 #%%%%%%%%%%%%%%%%%
 #   oh-my-zsh    %
 #%%%%%%%%%%%%%%%%%
