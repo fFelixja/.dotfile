@@ -2,7 +2,7 @@
 #%%%%%%%%%%%%%%%%%%%%%%%%
 #   Install path	%
 #%%%%%%%%%%%%%%%%%%%%%%%%
-export ZSH=/Users/felixjansson/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 #%%%%%%%%%%%%%%%%%%%%%%%%
 #   Visual set up	%
 #%%%%%%%%%%%%%%%%%%%%%%%%
