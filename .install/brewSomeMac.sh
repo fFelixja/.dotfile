@@ -8,7 +8,7 @@ gcc
 # brew some beer %
 #%%%%%%%%%%%%%%%%%
 brew install git android-sdk
-brew cask install java spotify iterm2 intellij-idea atom slack goofy
+brew cask install java spotify iterm2 intellij-idea atom slack goofy lastpass
 android
 #%%%%%%%%%%%%%%%%%
 #   oh-my-zsh    %
