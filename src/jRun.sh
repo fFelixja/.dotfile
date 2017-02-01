@@ -1,15 +1,15 @@
 #!/bin/bash
-FILE=".out/Main.class"
+FILE=$1
 DIR=".out"
 
-if [ ! -d $DIR  ];
-then
+#TODO Fixa så $1 kan vara flagga för java
+
+if [ ! -d $DIR  ]; then
 	echo "Can't find '.out'"
 else
-	if [ ! -f $FILE  ];
-	then
-		echo "Can't find 'Main.class', please run 'jComp'"
-	else
-		java -cp .out Main
-	fi
+       	if [ ! -f "$DIR/$FILE.class"  ]; then
+	       	echo "Can't find $FILE, please run 'jComp'"
+       	else
+	       	java -cp .out $FILE
+        fi
 fi
