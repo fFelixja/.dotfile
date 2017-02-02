@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 #    Run from source	 %
 #%%%%%%%%%%%%%%%%%%%%%%%%%
 export PATH=$PATH:"~/.pubSrc"
-export PSTH=$PATH:"~/.dotfile/src"
+export PATH=$PATH:"~/.dotfile/src"
 #%%%%%%%%%%%%%%%%%%%%%%%%%
 #        Alias		 %
 #%%%%%%%%%%%%%%%%%%%%%%%%%
