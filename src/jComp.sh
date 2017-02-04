@@ -1,7 +1,6 @@
 #!/bin/bash
 #This script will compile all java files directory and put *.class into ./out
 DIRECTORY=".out"
-FILEXT=$1
 ARGS=""
 FILES=""
 
