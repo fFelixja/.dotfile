@@ -1,5 +1,4 @@
 #!/bin/bash
-#This script will compile all java files directory and put *.class into ./out
 DIRECTORY=".out"
 ARGS=""
 FILES=""
@@ -9,6 +8,7 @@ for var in "$@"
  do
 	if [[ (-n $var) && ($var == -*) ]]; then
 		ARGS+=" $var"
+	else break
 	fi
 done
 ARGS+=" -d"
@@ -18,6 +18,7 @@ for var in "$@"
 do
 	if [[ (-n $var) && ($var != -*) ]]; then
 		FILES+=" $var"
+	else break
 	fi
 done
 
@@ -29,11 +30,8 @@ fi
 #Time to compile! :)
 if [ -z $FILES ]; then
 	javac $ARGS .out *.java
-	STATUS=1
 	echo "ALL FILES COMPILED"
 else
 	javac $ARGS .out $var
-	STATUS=1
 	echo "ALL GIVEN FILES COMPILED"
 fi
-exit $STATUS
