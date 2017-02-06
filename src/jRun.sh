@@ -1,15 +1,26 @@
 #!/bin/bash
-FILE=$1
-DIR=".out"
+DIRECTORY=".out/"
+ARGS=""
+FILES=""
 
-#TODO Fixa så $1 kan vara flagga för java
+#Get all arguments to compiler
+for var in "$@"
+ do
+	if [[ (-n $var) && ($var == -*) ]]; then
+		ARGS+=" $var"
+	fi
+done
 
-if [ ! -d $DIR  ]; then
-	echo "Can't find '.out'"
+#Get all classes which would be run
+for var in "$@"
+do
+	if [[ (-n $var) && ($var != -*) ]]; then
+		FILES+="$var"
+	fi
+done
+
+if [ ! -d $DIRECTORY  ]; then
+	echo "Can't find '.out', please run jComp"
 else
-       	if [ ! -f "$DIR/$FILE.class"  ]; then
-	       	echo "Can't find $FILE, please run 'jComp'"
-       	else
-	       	java -cp .out $FILE
-        fi
+	java -cp $DIRECTORY $FILES $ARGS
 fi

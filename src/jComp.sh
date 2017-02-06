@@ -8,7 +8,6 @@ for var in "$@"
  do
 	if [[ (-n $var) && ($var == -*) ]]; then
 		ARGS+=" $var"
-	else break
 	fi
 done
 ARGS+=" -d"
@@ -18,7 +17,6 @@ for var in "$@"
 do
 	if [[ (-n $var) && ($var != -*) ]]; then
 		FILES+=" $var"
-	else break
 	fi
 done
 
@@ -32,6 +30,6 @@ if [ -z $FILES ]; then
 	javac $ARGS .out *.java
 	echo "ALL FILES COMPILED"
 else
-	javac $ARGS .out $var
+	javac $ARGS .out $FILES
 	echo "ALL GIVEN FILES COMPILED"
 fi
