@@ -308,7 +308,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 # Move the dock to the right side of the screen
 # Possible values: "left", "bottom", "right"
-defaults write com.apple.dock orientation -string "bottom"
+defaults write com.apple.dock orientation -string "right"
 
 # Move the dock to the end of the screen
 # Possible values: "end", "middle", "start"
@@ -486,7 +486,7 @@ defaults write com.apple.terminal StringEncodings -array 4
 # open "${HOME}/init/Mathias.itermcolors"
 
 # Don’t display the annoying prompt when quitting iTerm
-# defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+ defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
 ###############################################################################
 # Time Machine                                                                #
