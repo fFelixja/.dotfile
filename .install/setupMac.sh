@@ -283,8 +283,8 @@ defaults write com.apple.finder EmptyTrashSecurely -bool false
 # Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-# Hide desktop icons
-defaults write com.apple.finder CreateDesktop false
+# Don't hide desktop icons
+defaults write com.apple.finder CreateDesktop true
 
 # Enable the MacBook Air SuperDrive on any Mac
 #sudo nvram boot-args="mbasd=1"
