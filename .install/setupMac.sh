@@ -630,7 +630,7 @@ defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
 #    mkdirs	 %
 #%%%%%%%%%%%%%%%%%
 if [ ! -d ~/develope ]; then
-	mkdir ~/develope
+	mkdir ~/develop
 fi
 
 if [ ! -d ~.pubSrc  ]; then
