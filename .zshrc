@@ -6,7 +6,6 @@ export ZSH=~/.oh-my-zsh
 #%%%%%%%%%%%%%%%%%%%%%%%%
 #   Visual set up	%
 #%%%%%%%%%%%%%%%%%%%%%%%%
-#ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='awesome-patched'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
@@ -33,6 +32,7 @@ alias jCR="bash ~/.dotfile/src/jCR.sh"
 alias jrun="bash ~/.dotfile/src/jRun.sh"
 alias jComp="bash ~/.dotfile/src/jComp.sh"
 alias b="cd ../"
+alias h="cd ~/"
 alias gitUntrack="git update-index --assume-unchanged"
 alias gitTrack="git update-index --no-assume-unchanged"
 alias chalmers="ssh felixja@remote11.chalmers.se"
