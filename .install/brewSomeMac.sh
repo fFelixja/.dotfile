@@ -8,7 +8,7 @@ gcc
 # brew some beer %
 #%%%%%%%%%%%%%%%%%
 brew install git android-sdk gradle
-brew cask install java spotify iterm2 intellij-idea atom slack goofy lastpass
+brew cask install toggldesktop java spotify iterm2 intellij-idea atom slack goofy lastpass
 #%%%%%%%%%%%%%%%%%
 #  Setup atom	 %
 #%%%%%%%%%%%%%%%%%
